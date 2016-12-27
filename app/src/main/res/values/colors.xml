@@ -3,4 +3,18 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <!--系统主题色-->
+    <color name="logo_color">#FFB700</color>
+    <!--通用的文字颜色 包括输入框的-->
+    <color name="tool_textcolor">#666</color>
+    <!--通用的辅助文字颜色 eg:我已同意等文字-->
+    <color name="tool_texthintcolor">#999</color>
+
+    <!--通用的灰色 主页背景灰-->
+    <color name="tool_bggraycolor">#F0F0F0</color>
+    <!--通用的分割线颜色-->
+    <color name="tool_linecolor">#f0f0f0</color>
 </resources>

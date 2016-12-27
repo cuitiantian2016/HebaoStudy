@@ -1,45 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    android:id="@+id/main_content"
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.li.hebaostudy.MainActivity">
-
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+    >
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/appbar_padding_top"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        android:layout_height="match_parent">
+        <View
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_height="58dp"/>
+        <View
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="58dp"/>
+    </RelativeLayout>
 
-        </android.support.v7.widget.Toolbar>
 
-    </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/container"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email"/>
+        android:layout_gravity="bottom">
 
-</android.support.design.widget.CoordinatorLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_home"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/tab_home_bg"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/img_changebag"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/tab_changebag_bg"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/img_invest"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/tab_invest_bg"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/img_mycenter"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/tab_mycenter_bg"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lin_text"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/text_home"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="首页"
+                    android:textColor="@color/main_bottom_text_color"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/text_changebag"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="零钱包"
+                    android:textColor="@color/main_bottom_text_color"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/text_invest"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="投资"
+                    android:textColor="@color/main_bottom_text_color"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/text_mycenter"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="我"
+                    android:textColor="@color/main_bottom_text_color"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</FrameLayout>
