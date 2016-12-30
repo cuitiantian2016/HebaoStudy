@@ -4,4 +4,25 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+
+
+    <!--如果使用全屏的话 在4.4之后记得给状态栏预留高度-->
+    <dimen name="statusbar_pading_top">0dp</dimen>
+
+
+
+    <!--通用的标题头高度-->
+    <dimen name="tool_titleheight">48dp</dimen>
+
+    <!--通用的标题头文字大小和底部按钮文字大小   标题字-->
+    <dimen name="tool_titletextsize">18sp</dimen>
+    <!--通用的输入框文字大小和功能图标文字大小   图标字  -->
+    <dimen name="tool_contenttextsize">16sp</dimen>
+    <!--通用提示文字大小      -->
+    <dimen name="tool_hinttextsize">14sp</dimen>
+    <!--通用提示文字更小一级的     -->
+    <dimen name="tool_hinttextsizesmall">12sp</dimen>
+
+    <!-- 通用的分割线大小-->
+    <dimen name="tool_lineheight">0.5dp</dimen>
 </resources>

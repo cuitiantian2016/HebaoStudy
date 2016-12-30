@@ -3,6 +3,7 @@ package com.li.hebaostudy.activity;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -135,6 +136,9 @@ public class WelcomeActivity extends BaseActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                   //动画结束之后跳转到认证页面
+                Intent intent=new Intent(WelcomeActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
             }
 
             @Override

@@ -3,15 +3,12 @@ package com.li.hebaostudy.application;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Environment;
-
-import com.li.hebaostudy.util.LogUtils;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.utils.StorageUtils;
 
 import java.io.File;
 
@@ -24,26 +21,37 @@ import java.io.File;
 public class HebaoApplication extends Application {
 
     public static Context context = null;
-    public static boolean IS_LOG = true;
-
-    public static boolean membershop_isopen = false;//会员商城开关
-    public static boolean notice_isopen = false;//开标提醒开关
     private static HebaoApplication application;
-
+    public static boolean IS_LOG = true;
 
     @Override
     public void onCreate() {
         super.onCreate();
         application = this;
+        context=getApplicationContext();
         //PreferencesUtil.init(application);
         //初始化数据库
         initImageLoader(application);
     }
 
+    /**
+     * 获取Application 运行实例
+     * @return
+     */
     public static HebaoApplication getInstance() {
         return application;
     }
 
+    /**
+     * 获取Context实力
+     * @return
+     */
+    public static Context getContext(){
+        if (null!=context) {
+            return context;
+        }
+        return application.getApplicationContext();
+    }
     /**
      * 初始化Imageloader
      *
@@ -54,14 +62,14 @@ public class HebaoApplication extends Application {
         // File cacheDir = StorageUtils.getOwnCacheDirectory(context, "/xyyy/lxn/imageloader/Cache");
         //context.getExternalCacheDir()  /storage/emulated/0/Android/data/com.lxn.utilone/cache  这个目录在SD下 会随着系统卸载被删除
         File cacheDir = context.getExternalCacheDir();
+        if(null==cacheDir){
+            cacheDir= StorageUtils.getOwnCacheDirectory(context, "/lxn/study/imageloader/Cache");
+        }
         //这个目录在  data/data/com.lxn.utilone/cache 需要root才能查看数据
-        File cacheDir1 = context.getCacheDir();
-        LogUtils.i("getCacheDir====="+cacheDir1.getAbsolutePath());
-
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
-                context)
+        //File cacheDir1 = context.getCacheDir();
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
                 // 设置线程优先级
-                .threadPriority(Thread.NORM_PRIORITY + 2)
+                .threadPriority(Thread.NORM_PRIORITY )
                 // 设置图片缓存路劲
                 .diskCache(new UnlimitedDiskCache(cacheDir))
                 /*
@@ -79,7 +87,6 @@ public class HebaoApplication extends Application {
 				 * 2.new HashCodeFileNameGenerator()//使用HASHCODE对UIL进行加密命名
 				 */
                 .discCacheFileNameGenerator(new Md5FileNameGenerator())
-
                 .tasksProcessingOrder(QueueProcessingType.LIFO)
                 .writeDebugLogs() // Remove for release app
                 .build();
