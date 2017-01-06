@@ -24,10 +24,13 @@ import android.view.WindowManager;
 
 import java.io.File;
 import java.io.IOException;
-
+/**
+  *  @copyright:北京爱钱帮财富科技有限公司
+  *  功能描述: image处理的工具类
+  *   作 者:  李晓楠
+  *   时 间： 2017/1/6 15:24 
+ */
 public class ImageUtils {
-
-
     private static final Bitmap.Config BITMAP_CONFIG = Bitmap.Config.ARGB_8888;
     private static final int COLORDRAWABLE_DIMENSION = 2;
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -19,36 +19,309 @@
             android:textSize="@dimen/tool_titletextsize"
         />
         <TextView
+            android:id="@+id/text_set"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:padding="12dp"
             android:text="设置"
-            android:id="@+id/text_set"
             android:textColor="@color/white"
             android:textSize="@dimen/tool_hinttextsize"
         />
     </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
-        android:background="@color/tool_bggraycolor"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@color/tool_bggraycolor">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:background="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
+                android:padding="12dp">
+                <com.li.hebaostudy.view.ShapeImageView
+                    android:id="@+id/img_userimg"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
                     android:src="@drawable/packet_photo"
-                />
+                    app:siv_round_radius="25dp"
+                    app:siv_shape="rect"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/img_userimg"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="庐州月"
+                        android:textColor="@color/tool_textcolor"
+                        android:textSize="@dimen/tool_hinttextsize"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/usercenter_level_textbg"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="1dp"
+                        android:text="Lv10"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tool_hinttextsizesmall"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_btn_vector"/>
             </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/rel_gift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <ImageView
+                        android:id="@+id/img_gift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="6dp"
+                        android:paddingTop="6dp"
+                        android:src="@drawable/me_img_gift"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_gift"
+                        android:text="福利"
+                        android:textColor="@color/tool_textcolor"
+                        android:textSize="@dimen/tool_hinttextsize"
+                    />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/common_btn_vector"/>
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="60dp"
+                    android:background="@color/tool_linecolor"/>
+                <RelativeLayout
+                    android:id="@+id/rel_bell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <ImageView
+                        android:id="@+id/img_bell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:paddingTop="6dp"
+                        android:src="@drawable/me_img_bell"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_bell"
+                        android:text="消息"
+                        android:textColor="@color/tool_textcolor"
+                        android:textSize="@dimen/tool_hinttextsize"
+                    />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/common_btn_vector"/>
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="60dp"
+                    android:background="@color/tool_linecolor"/>
+                <RelativeLayout
+                    android:id="@+id/rel_serve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <ImageView
+                        android:id="@+id/img_serve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:paddingTop="6dp"
+                        android:src="@drawable/me_img_serve"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_serve"
+                        android:text="荷包服务"
+                        android:textColor="@color/tool_textcolor"
+                        android:textSize="@dimen/tool_hinttextsize"
+                    />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/common_btn_vector"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/rel_asset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <ImageView
+                        android:id="@+id/img_asset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:paddingTop="6dp"
+                        android:src="@drawable/me_img_asset"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_asset"
+                        android:text="我的资产"
+                        android:textColor="@color/tool_textcolor"
+                        android:textSize="@dimen/tool_hinttextsize"
+                    />
+                    <ImageView
+                        android:id="@+id/img_asset_go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/common_btn_vector"/>
+                    <TextView
+                        android:id="@+id/text_asset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/img_asset_go"
+                        android:text="321.02"
+                        android:textColor="@color/tool_texthintcolor"
+                        android:textSize="@dimen/tool_hinttextsize"/>
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="60dp"
+                    android:background="@color/tool_linecolor"/>
+                <RelativeLayout
+                    android:id="@+id/rel_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <ImageView
+                        android:id="@+id/img_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:paddingTop="6dp"
+                        android:src="@drawable/me_img_card"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_card"
+                        android:text="我的银行卡"
+                        android:textColor="@color/tool_textcolor"
+                        android:textSize="@dimen/tool_hinttextsize"
+                    />
+                    <ImageView
+                        android:id="@+id/img_card_go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/common_btn_vector"/>
+                    <ImageView
+                        android:id="@+id/img_mecard"
+                        android:layout_width="wrap_content"
+                        android:layout_toLeftOf="@+id/img_card_go"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/sp_b_abc"
+                               android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/rel_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <ImageView
+                        android:id="@+id/img_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:paddingTop="6dp"
+                        android:src="@drawable/me_img_share"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_share"
+                        android:text="分享荷包"
+                        android:textColor="@color/tool_textcolor"
+                        android:textSize="@dimen/tool_hinttextsize"
+                    />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/common_btn_vector"/>
+                </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

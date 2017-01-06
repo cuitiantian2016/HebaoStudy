@@ -15,11 +15,14 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+import com.li.hebaostudy.R;
+import com.li.hebaostudy.util.ImageUtils;
 
 /**
- * 可设置形状的ImageView，抗边缘锯齿
- *
- * @author huangziwei
+  *  @copyright:北京爱钱帮财富科技有限公司
+  *  功能描述: 自定义控件的Imageview 可设置形状，抗边缘锯齿
+  *   作 者:  李晓楠
+  *   时 间： 2017/1/6 15:23
  */
 public class ShapeImageView extends ImageView {
 
