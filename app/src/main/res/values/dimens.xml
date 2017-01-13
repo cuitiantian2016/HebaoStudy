@@ -15,6 +15,8 @@
     <dimen name="tool_titleheight">48dp</dimen>
 
     <!--通用的标题头文字大小和底部按钮文字大小   标题字-->
+    <dimen name="tool_bigtextsize">28sp</dimen>
+    <!--通用的标题头文字大小和底部按钮文字大小   标题字-->
     <dimen name="tool_titletextsize">18sp</dimen>
     <!--通用的输入框文字大小和功能图标文字大小   图标字  -->
     <dimen name="tool_contenttextsize">16sp</dimen>

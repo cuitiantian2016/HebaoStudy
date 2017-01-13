@@ -36,4 +36,6 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     //imageload图片处理
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    //轮播图控件的框架引入
+    compile 'com.youth.banner:banner:1.4.8'
 }

@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:background="@color/tool_bggraycolor"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tool_bggraycolor"
+                android:orientation="vertical">
+    <com.li.hebaostudy.view.GradationScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:indicator_drawable_selected="@drawable/banner_selected_radius"
+                app:indicator_drawable_unselected="@drawable/banner_unselected_radius"
+                app:indicator_height="8dp"
+                app:indicator_margin="4dp"
+                app:indicator_width="8dp"/>
+            <com.li.hebaostudy.view.MyListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/tool_bggraycolor"
+                android:dividerHeight="6dp"
+                android:listSelector="#00000000"
+                android:scrollbars="none"/>
+        </LinearLayout>
+    </com.li.hebaostudy.view.GradationScrollView>
     <TextView
-        android:text="投资"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_titleheight"
+        android:background="#00000000"
+        android:gravity="center"
+        android:text="投资列表"
+        android:textColor="#00000000"
+        android:textSize="@dimen/tool_titletextsize"/>
+
+</RelativeLayout>

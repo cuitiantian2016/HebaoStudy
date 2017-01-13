@@ -15,3 +15,7 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+# banner轮播图框架 的混淆代码
+-keep class com.youth.banner.** {
+    *;
+}

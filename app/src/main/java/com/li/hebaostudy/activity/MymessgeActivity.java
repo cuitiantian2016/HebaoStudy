@@ -83,7 +83,7 @@ public class MymessgeActivity extends AppCompatActivity {
                     child = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_item_mymessage, parent, false);
                 }
 
-                ((TextView) child.findViewById(R.id.pos)).setText("" + position);
+                ((TextView) child.findViewById(R.id.pos)).setText(String.valueOf(position));
                 child.findViewById(R.id.image).setBackgroundColor(colors[position]);
                 return child;
             }
@@ -98,6 +98,7 @@ public class MymessgeActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.rel_golast:
+                //回到最新的
                 int size=currentposition;
                  while (size>0){
                      cardList.turnBy(-1);

@@ -6,12 +6,39 @@
               android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-
-                    android:layout_height="@dimen/tool_titleheight">
-
+        android:layout_height="@dimen/tool_titleheight"
+        android:background="@color/tool_redcolor"
+        android:paddingTop="@dimen/statusbar_pading_top">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="零钱包"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tool_titletextsize"
+        />
+        <ImageView
+            android:id="@+id/img_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/navig_img_question"
+            android:layout_centerVertical="true"
+            android:paddingRight="12dp"
+        />
     </RelativeLayout>
-    <TextView
-        android:text="零钱包"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <com.li.hebaostudy.view.verticalslide.DragLayout
+        android:id="@+id/drag_layout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/framlayout_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:id="@+id/framlayout_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.li.hebaostudy.view.verticalslide.DragLayout>
 </LinearLayout>

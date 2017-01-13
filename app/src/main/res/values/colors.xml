@@ -17,4 +17,6 @@
     <color name="tool_bggraycolor">#F0F0F0</color>
     <!--通用的分割线颜色-->
     <color name="tool_linecolor">#f0f0f0</color>
+    <!--通用文字红色-->
+    <color name="tool_redcolor">#F95C06</color>
 </resources>
