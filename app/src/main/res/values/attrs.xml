@@ -76,4 +76,17 @@
         <attr name="current_value" format="float"/>
         <attr name="max_value" format="float"/>
     </declare-styleable>
+
+    <!--零钱包买入界面类似支付宝底部弹出的买入-->
+    <declare-styleable name="inputBox">
+        <attr name="passwordCount" format="integer"/>
+        <attr name="stokeColor" format="color"/>
+        <attr name="symbolColor" format="color"/>
+        <attr name="symbolRadius" format="dimension"/>
+        <attr name="inputBoxStroke" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="materialStatusProgressAttr">
+        <attr name="arcColor" format="reference|color"/>
+        <attr name="progressBarBorderWidth" format="dimension"/>
+    </declare-styleable>
 </resources>

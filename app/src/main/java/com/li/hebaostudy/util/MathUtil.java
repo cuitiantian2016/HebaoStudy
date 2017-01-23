@@ -72,8 +72,10 @@ public class MathUtil {
      * @return
      */
     public static String mathTodecimaltwo(double math){
-        DecimalFormat df   = new DecimalFormat("######0.00");
-        return df.format(math);
+        //这种方式是四舍五入的
+        BigDecimal b = new BigDecimal(String.valueOf(math));
+        b=b.setScale(2, BigDecimal.ROUND_HALF_UP);//四舍五入的
+        return b.toString();
     }
     /**
      * 将数字以千为单位，用“，”分割。

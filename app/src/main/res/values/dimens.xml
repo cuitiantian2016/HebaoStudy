@@ -27,4 +27,8 @@
 
     <!-- 通用的分割线大小-->
     <dimen name="tool_lineheight">0.5dp</dimen>
+
+
+    <!--类似支付宝买入弹框-->
+    <dimen name="material_status_progress_border">3dp</dimen>
 </resources>

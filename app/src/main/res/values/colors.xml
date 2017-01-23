@@ -19,4 +19,12 @@
     <color name="tool_linecolor">#f0f0f0</color>
     <!--通用文字红色-->
     <color name="tool_redcolor">#F95C06</color>
+
+
+    <!--类似支付宝买入底部弹框-->
+    <color name="line">#eeeeee</color>
+    <color name="text_color_grey">#777777</color>
+    <color name="bg_btn">#237aec</color>
+    <color name="blue_light">#2e88ff</color>
+    <color name="colorstatus">#3da1ff</color>
 </resources>

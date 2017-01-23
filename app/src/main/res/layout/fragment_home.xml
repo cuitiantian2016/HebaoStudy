@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
-              android:background="#ff0000"
               android:paddingTop="@dimen/statusbar_pading_top"
               android:layout_width="match_parent"
+              android:background="#888888"
               android:layout_height="match_parent">
            <TextView
                android:text="首页的"
                android:textColor="@color/white"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"/>
+           <Button android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="去买入"
+                   android:id="@+id/gobuy"
+           />
 </LinearLayout>
